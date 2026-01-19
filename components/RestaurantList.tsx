@@ -23,12 +23,17 @@ const RestaurantList = () => {
 const ResItem = ({ Item }: any) => {
   return (
     <TouchableWithoutFeedback onPress={() => console.log("res")}>
-      <View className="mb-6">
-        <View className="mb-2 rounded-lg h-48">
-          <Image source={Item.img} resizeMode="contain" style={styles.resImg} />
+      <View className="mb-8">
+        <View className="mb-3 rounded-lg h-48">
+          <Image
+            source={Item.img}
+            resizeMode="cover"
+            style={styles.resImg}
+            className="rounded-xl"
+          />
         </View>
-        <Text className="">{Item.name}</Text>
-        <Text>{Item.menu}</Text>
+        <Text className="text-lg font-semibold">{Item.name}</Text>
+        <Text className="font-light">{Item.menu}</Text>
       </View>
     </TouchableWithoutFeedback>
   );
@@ -36,9 +41,9 @@ const ResItem = ({ Item }: any) => {
 
 const styles = StyleSheet.create({
   resImg: {
-    // borderRadius: 50,
+    // borderRadius: "60%",
+    width: "100%",
     height: "100%",
-    alignSelf: "center",
   },
 });
 export default RestaurantList;
