@@ -7,29 +7,36 @@ const Home = () => {
   const [name, setName] = useState("Avoy");
   const [address, setAddress] = useState("Khaprail More, Siliguri");
   return (
-    <SafeAreaView className="mx-8 my-4">
-      <View>
-        <Text>Deliver To</Text>
-        <Text>{address}</Text>
-      </View>
-
-      <View>
-        <Text>Hey {name}, Good Afternoon! </Text>
-      </View>
-
-      <Searchbar />
-
-      <View>
+    <SafeAreaView className="flex-1 bg-white">
+      <View className="px-6 py-8 gap-4">
         <View>
-          <Text>All Categories</Text>
-          <TouchableOpacity>
-            <Text>See All {`>`}</Text>
-          </TouchableOpacity>
+          <Text className="font-bold text-[13px] uppercase text-orange-400">
+            Deliver To
+          </Text>
+          <Text className="text-[13px]">{address}</Text>
         </View>
-        <FoodCategories />
-      </View>
 
-      <RestaurantList />
+        <View>
+          <Text className="text-base">
+            Hey {name},{" "}
+            <Text className="font-semibold">Good Afternoon!</Text>{" "}
+          </Text>
+        </View>
+
+        <Searchbar />
+
+        <View>
+          <View>
+            <Text>All Categories</Text>
+            <TouchableOpacity>
+              <Text>See All {`>`}</Text>
+            </TouchableOpacity>
+          </View>
+          <FoodCategories />
+        </View>
+
+        <RestaurantList />
+      </View>
     </SafeAreaView>
   );
 };
