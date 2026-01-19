@@ -15,6 +15,7 @@ const FoodCategories = () => {
       <FlatList
         data={categories}
         renderItem={({ item }) => <CategoryItem Item={item} />}
+        keyExtractor={(item) => item.id.toString()}
         horizontal
         showsHorizontalScrollIndicator={false}
       />
