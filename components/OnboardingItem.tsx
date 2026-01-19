@@ -45,10 +45,4 @@ const OnboardingItem = ({ content }: any) => {
 
 export default OnboardingItem;
 
-const styles = StyleSheet.create({
-  // contentImage: {
-  //     width: ,
-  //     flex: 0.6,
-  //     justifyContent: "center"
-  // }
-});
+const styles = StyleSheet.create({});

@@ -8,7 +8,7 @@ const Home = () => {
   const [address, setAddress] = useState("Khaprail More, Siliguri");
   return (
     <SafeAreaView className="flex-1 bg-white">
-      <View className="px-6 py-8 gap-4">
+      <View className="px-6 py-8 gap-6">
         <View>
           <Text className="font-bold text-[13px] uppercase text-orange-400">
             Deliver To
@@ -26,10 +26,10 @@ const Home = () => {
         <Searchbar />
 
         <View>
-          <View>
-            <Text>All Categories</Text>
+          <View className="flex-row justify-between items-center mb-8">
+            <Text className="text-base font-[500]">All Categories</Text>
             <TouchableOpacity>
-              <Text>See All {`>`}</Text>
+              <Text className="text-[14px]">See All {`>`}</Text>
             </TouchableOpacity>
           </View>
           <FoodCategories />
