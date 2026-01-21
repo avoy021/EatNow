@@ -8,6 +8,8 @@ import {
 } from "react-native";
 import React from "react";
 import restaurants from "@/assets/data/restaurants";
+import { router } from "expo-router";
+import RestaurantInfo from "./RestaurantInfo";
 
 const RestaurantList = () => {
   return (
@@ -22,9 +24,16 @@ const RestaurantList = () => {
 
 const ResItem = ({ Item }: any) => {
   return (
-    <TouchableWithoutFeedback onPress={() => console.log("res")}>
+    <TouchableWithoutFeedback
+      onPress={() =>
+        router.push({
+          pathname: "/restaurant/[id]",
+          params: { id: Item.id.toString() },
+        })
+      }
+    >
       <View className="mb-8">
-        <View className="mb-3 rounded-lg h-48">
+        <View className="rounded-lg h-48">
           <Image
             source={Item.img}
             resizeMode="cover"
@@ -32,8 +41,11 @@ const ResItem = ({ Item }: any) => {
             className="rounded-xl"
           />
         </View>
-        <Text className="text-lg font-semibold">{Item.name}</Text>
-        <Text className="font-light">{Item.menu}</Text>
+        <Text className="text-lg font-semibold mt-2">{Item.name}</Text>
+        <Text className="font-light mt-2">{Item.menu}</Text>
+        <View className="mt-3">
+          <RestaurantInfo size={22} color={"#ff9030"} />
+        </View>
       </View>
     </TouchableWithoutFeedback>
   );
@@ -41,7 +53,6 @@ const ResItem = ({ Item }: any) => {
 
 const styles = StyleSheet.create({
   resImg: {
-    // borderRadius: "60%",
     width: "100%",
     height: "100%",
   },

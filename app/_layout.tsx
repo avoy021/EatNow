@@ -9,8 +9,12 @@ const rootLayout = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => {
     setTimeout(async () => {
-      await SplashScreen.hideAsync();
-      setReady(true);
+      try {
+        await SplashScreen.hideAsync();
+        setReady(true);
+      } catch (error) {
+        console.log(error);
+      }
     }, 3000);
   }, []);
 
@@ -20,6 +24,7 @@ const rootLayout = () => {
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="auth" options={{ headerShown: false }} />
       <Stack.Screen name="home" options={{ headerShown: false }} />
+      <Stack.Screen name="restaurant" options={{ headerShown: false }} />
     </Stack>
   );
 };

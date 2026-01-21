@@ -8,10 +8,10 @@ const Home = () => {
   const [address, setAddress] = useState("Khaprail More, Siliguri");
   return (
     <SafeAreaView className="flex-1 bg-white">
-      <ScrollView>
-        <View className="px-6 py-8 gap-6">
+      <ScrollView keyboardShouldPersistTaps="handled">
+        <View className="px-6 py-8 gap-8">
           <View className="">
-            <Text className="font-bold text-[13px] uppercase text-orange-400">
+            <Text className="font-semibold text-[14px] text-orange-600">
               Deliver To
             </Text>
             <Text className="text-[13px]">{address}</Text>
@@ -40,7 +40,7 @@ const Home = () => {
           </View>
 
           <View>
-            <View className="flex-row justify-between items-center mb-4">
+            <View className="flex-row justify-between items-center mb-5">
               <Text className="text-base font-semibold text-[#343434]">
                 Open Restaurants
               </Text>
