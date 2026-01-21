@@ -31,7 +31,7 @@ const CategoryItem = ({ Item }: any) => {
       style={styles.parent}
     >
       <Image source={Item.img} resizeMode="contain" style={styles.img} />
-      <Text className="text-sm font-semibold mx-3">{Item.title}</Text>
+      <Text className="text-sm font-regular mx-3">{Item.title}</Text>
     </TouchableOpacity>
   );
 };

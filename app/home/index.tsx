@@ -9,9 +9,9 @@ const Home = () => {
   return (
     <SafeAreaView className="flex-1 bg-white">
       <ScrollView keyboardShouldPersistTaps="handled">
-        <View className="px-6 py-8 gap-8">
-          <View className="">
-            <Text className="font-semibold text-[14px] text-orange-600">
+        <View className="px-6 py-8 gap-8 font-medium">
+          <View className="gap-1">
+            <Text className="font-semibold text-[14px] text-[#ff9030] uppercase">
               Deliver To
             </Text>
             <Text className="text-[13px]">{address}</Text>

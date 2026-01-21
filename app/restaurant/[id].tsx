@@ -13,8 +13,14 @@ const Restaurant = () => {
         <View>
           <Image source={res?.img} resizeMode="cover" style={styles.resImg} />
         </View>
-        <View className="px-6 mt-7">
+        <View className="px-6 mt-5">
           <RestaurantInfo size={26} color={"#ff9030"} />
+        </View>
+        <View className="px-6 mt-5 gap-2">
+          <Text className="text-lg font-semibold">{res?.name}</Text>
+          <Text className="text-sm font-regular text-[#36454F]">
+            {res?.about}
+          </Text>
         </View>
       </ScrollView>
     </SafeAreaView>

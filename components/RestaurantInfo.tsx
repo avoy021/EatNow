@@ -7,12 +7,12 @@ const RestaurantInfo = ({ size, color }: { size: number; color: string }) => {
     <View className="flex-row items-center gap-x-7">
       <View className="flex-row items-center gap-x-1.5">
         <MaterialCommunityIcons name="star-outline" size={size} color={color} />
-        <Text className="text-sm font-semibold">4.5</Text>
+        <Text className="text-sm font-medium">4.5</Text>
       </View>
 
       <View className="flex-row items-center gap-x-1.5">
         <MaterialCommunityIcons name="bike-fast" size={size} color={color} />
-        <Text className="text-sm font-semibold text-gray-800">Free</Text>
+        <Text className="text-sm font-medium text-gray-800">Free</Text>
       </View>
 
       <View className="flex-row items-center gap-x-1.5">
@@ -21,7 +21,7 @@ const RestaurantInfo = ({ size, color }: { size: number; color: string }) => {
           size={size}
           color={color}
         />
-        <Text className="text-sm font-semibold text-gray-800">20 min</Text>
+        <Text className="text-sm font-medium text-gray-800">20 min</Text>
       </View>
     </View>
   );

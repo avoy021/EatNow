@@ -41,8 +41,8 @@ const ResItem = ({ Item }: any) => {
             className="rounded-xl"
           />
         </View>
-        <Text className="text-lg font-semibold mt-2">{Item.name}</Text>
-        <Text className="font-light mt-2">{Item.menu}</Text>
+        <Text className="text-lg font-medium mt-2">{Item.name}</Text>
+        <Text className="mt-2">{Item.menu}</Text>
         <View className="mt-3">
           <RestaurantInfo size={22} color={"#ff9030"} />
         </View>
