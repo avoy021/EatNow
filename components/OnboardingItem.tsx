@@ -1,8 +1,9 @@
 import { router } from "expo-router";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import Btn from "./Btn";
+import onboardingData from "@/assets/data/onboardingData";
 
-const OnboardingItem = ({ content, handleNext }: any) => {
+const OnboardingItem = ({ content, handleNext, index }: any) => {
   const { width, height } = Dimensions.get("screen");
   return (
     <View className="flex-1 w-screen h-screen">
@@ -27,7 +28,11 @@ const OnboardingItem = ({ content, handleNext }: any) => {
       {/* <Pagination /> */}
 
       <View className="mx-8 mt-auto">
-        <Btn title="NEXT" onPress={handleNext} btnColor="bg-orange-500" />
+        <Btn
+          title={index === onboardingData.length - 1 ? "Get Started" : "NEXT"}
+          onPress={handleNext}
+          btnColor="bg-orange-500"
+        />
         <Btn
           title="Skip"
           onPress={() => router.push("/auth")}

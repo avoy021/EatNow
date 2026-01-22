@@ -1,7 +1,9 @@
 import onboardingData from "@/assets/data/onboardingData";
-import { Dimensions, FlatList, View } from "react-native";
+import { Dimensions, FlatList, Text, View } from "react-native";
 import OnboardingItem from "./OnboardingItem";
 import { useRef, useState } from "react";
+import Btn from "./Btn";
+import { router } from "expo-router";
 
 const { width } = Dimensions.get("window");
 
@@ -14,6 +16,8 @@ const Onboarding = () => {
         index: currentIndex + 1,
         animated: true,
       });
+    } else {
+      router.push("/auth");
     }
   };
   return (
@@ -22,7 +26,11 @@ const Onboarding = () => {
         ref={flatlistRef}
         data={onboardingData}
         renderItem={({ item }) => (
-          <OnboardingItem handleNext={handleNext} content={item} />
+          <OnboardingItem
+            handleNext={handleNext}
+            index={currentIndex}
+            content={item}
+          />
         )}
         keyExtractor={(item) => item.id.toString()}
         horizontal
