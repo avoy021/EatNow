@@ -1,4 +1,5 @@
 import Btn from "./Btn";
+import CartBtn from "./CartBtn";
 import FoodCategories from "./FoodCategories";
 import FoodItem from "./FoodItem";
 import Onboarding from "./Onboarding";
@@ -7,8 +8,9 @@ import RestaurantList from "./RestaurantList";
 import Searchbar from "./Searchbar";
 
 export {
-    Btn,
-    FoodCategories, FoodItem, Onboarding,
+    Btn, CartBtn, FoodCategories,
+    FoodItem,
+    Onboarding,
     OnboardingItem,
     RestaurantList,
     Searchbar

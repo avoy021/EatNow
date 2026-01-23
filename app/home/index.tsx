@@ -1,20 +1,30 @@
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { FoodCategories, RestaurantList, Searchbar } from "@/components";
+import {
+  CartBtn,
+  FoodCategories,
+  RestaurantList,
+  Searchbar,
+} from "@/components";
+import { router } from "expo-router";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Home = () => {
   const [name, setName] = useState("Avoy");
-  const [address, setAddress] = useState("Khaprail More, Siliguri");
+  const [address, setAddress] = useState("Telangana, India");
   return (
     <SafeAreaView className="flex-1 bg-white">
       <ScrollView keyboardShouldPersistTaps="handled">
         <View className="px-6 py-8 gap-8 font-medium">
-          <View className="gap-1">
-            <Text className="font-semibold text-[14px] text-[#ff9030] uppercase">
-              Deliver To
-            </Text>
-            <Text className="text-[13px]">{address}</Text>
+          <View className="flex-row justify-between items-center">
+            <View>
+              <Text className="font-semibold text-sm text-[#ff9030] uppercase">
+                Deliver To
+              </Text>
+              <Text className="text-sm">{address}</Text>
+            </View>
+            <CartBtn />
           </View>
 
           <View>
