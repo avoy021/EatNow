@@ -61,7 +61,7 @@ const AuthPage = () => {
         <Btn
           title={isRegistering ? "Sign Up" : "Login"}
           btnColor="bg-orange-500"
-          onPress={() => router.push("/home")}
+          onPress={() => router.push("/(tabs)")}
           btnClass="py-5"
           textClass="text-[14px]"
         />
