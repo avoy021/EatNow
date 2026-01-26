@@ -1,12 +1,10 @@
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import {
-  CartBtn,
-  FoodCategories,
-  RestaurantList,
-  Searchbar,
-} from "@/components";
+import CartBtn from "@/components/CartBtn";
+import FoodCategories from "@/components/FoodCategories";
+import RestaurantList from "@/components/RestaurantList";
+import Searchbar from "@/components/Searchbar";
 import { router } from "expo-router";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 

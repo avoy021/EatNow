@@ -1,4 +1,4 @@
-import { Btn } from "@/components";
+import Btn from "@/components/Btn";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { router } from "expo-router";
 import { useState } from "react";

@@ -1,4 +1,4 @@
-import { Onboarding } from "@/components";
+import Onboarding from "@/components/Onboarding";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const HomeScreen = () => {

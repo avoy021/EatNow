@@ -6,7 +6,7 @@ import { router } from "expo-router";
 const CartBtn = () => {
   return (
     <TouchableOpacity
-      onPress={() => router.push("/cart")}
+      onPress={() => router.push("/(tabs)/cart")}
       activeOpacity={0.8}
       className="relative bg-[#1f1f1f] p-2 rounded-full items-center justify-center"
     >
