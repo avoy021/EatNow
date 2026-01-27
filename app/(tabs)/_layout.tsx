@@ -19,7 +19,7 @@ const TabsLayout = () => {
         options={{
           title: "Cart",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="cart" size={24} />
+            <MaterialCommunityIcons name="shopping-outline" size={24} />
           ),
           headerShown: false,
         }}
