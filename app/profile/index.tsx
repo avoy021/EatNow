@@ -11,7 +11,7 @@ const Profile = () => {
           source={{
             uri: "https://i.pravatar.cc/150",
           }}
-          className="w-28 h-28 rounded-full border-4 border-white"
+          className="w-28 h-28 rounded-full border-2 border-white"
         />
 
         <Text className="mt-4 text-white text-xl font-semibold">Avoy Das</Text>

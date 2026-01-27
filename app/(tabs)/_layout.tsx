@@ -24,7 +24,16 @@ const TabsLayout = () => {
           headerShown: false,
         }}
       />
-      {/* <Tabs.Screen name="cart" options={{ title: "Profile" }} /> */}
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="account" size={24} />
+          ),
+          headerShown: false,
+        }}
+      />
     </Tabs>
   );
 };
