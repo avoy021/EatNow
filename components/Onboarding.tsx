@@ -4,6 +4,7 @@ import OnboardingItem from "./OnboardingItem";
 import { useRef, useState } from "react";
 import Btn from "./Btn";
 import { router } from "expo-router";
+import PaginationDots from "./PaginationDots";
 
 const { width } = Dimensions.get("window");
 
@@ -21,7 +22,7 @@ const Onboarding = () => {
     }
   };
   return (
-    <View className="bg-gray-50">
+    <View className="h-screen bg-gray-50 justify-between">
       <FlatList
         ref={flatlistRef}
         data={onboardingData}
@@ -42,6 +43,25 @@ const Onboarding = () => {
           setCurrentIndex(index);
         }}
       />
+      <PaginationDots
+        currentIndex={currentIndex}
+        total={onboardingData.length}
+      />
+      <View className="mt-20 mx-8">
+        <Btn
+          title={
+            currentIndex === onboardingData.length - 1 ? "Get Started" : "NEXT"
+          }
+          onPress={handleNext}
+          btnColor="bg-orange-500"
+        />
+        <Btn
+          title="Skip"
+          onPress={() => router.push("/auth")}
+          btnColor=""
+          textColor="text-gray-500"
+        />
+      </View>
     </View>
   );
 };
