@@ -3,10 +3,10 @@ import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import Btn from "./Btn";
 import onboardingData from "@/assets/data/onboardingData";
 
-const OnboardingItem = ({ content, handleNext, index }: any) => {
+const OnboardingItem = ({ content }: any) => {
   const { width, height } = Dimensions.get("screen");
   return (
-    <View className="flex-1 w-screen">
+    <View className="w-screen">
       <Image
         source={content.img}
         resizeMode="cover"

@@ -6,7 +6,7 @@ const Profile = () => {
   return (
     <View className="flex-1 bg-gray-50">
       {/* Header */}
-      <View className="items-center bg-orange-500 pt-16 pb-10 rounded-b-[40px]">
+      <View className="items-center bg-orange-400 pt-16 pb-10 rounded-b-[40px]">
         <Image
           source={{
             uri: "https://i.pravatar.cc/150",

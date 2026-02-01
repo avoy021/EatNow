@@ -3,15 +3,16 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const TabsLayout = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: "orange" }}>
+    <Tabs
+      screenOptions={{ headerShown: false, tabBarActiveTintColor: "orange" }}
+    >
       <Tabs.Screen
         name="index"
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" size={24} />
+            <MaterialCommunityIcons name="home-outline" size={24} />
           ),
-          headerShown: false,
         }}
       />
       <Tabs.Screen
@@ -21,7 +22,6 @@ const TabsLayout = () => {
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="shopping-outline" size={24} />
           ),
-          headerShown: false,
         }}
       />
       <Tabs.Screen
@@ -29,9 +29,8 @@ const TabsLayout = () => {
         options={{
           title: "Profile",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="account" size={24} />
+            <MaterialCommunityIcons name="account-outline" size={24} />
           ),
-          headerShown: false,
         }}
       />
     </Tabs>

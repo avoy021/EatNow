@@ -4,11 +4,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const Cart = () => {
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <Text>Cart is live</Text>
-      </ScrollView>
-    </SafeAreaView>
+    <ScrollView>
+      <Text>Cart is live</Text>
+    </ScrollView>
   );
 };
 

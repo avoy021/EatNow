@@ -7,12 +7,15 @@ import RestaurantList from "@/components/RestaurantList";
 import Searchbar from "@/components/Searchbar";
 import { router } from "expo-router";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const Home = () => {
   const [name, setName] = useState("Avoy");
   const [address, setAddress] = useState("Telangana, India");
+  const insets = useSafeAreaInsets();
+
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <View className="flex-1 bg-white" style={{ paddingTop: insets.top }}>
       <ScrollView keyboardShouldPersistTaps="handled">
         <View className="px-6 py-8 gap-8 font-medium">
           <View className="flex-row justify-between items-center">
@@ -62,7 +65,7 @@ const Home = () => {
           </View>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

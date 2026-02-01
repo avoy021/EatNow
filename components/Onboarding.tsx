@@ -43,24 +43,29 @@ const Onboarding = () => {
           setCurrentIndex(index);
         }}
       />
-      <PaginationDots
-        currentIndex={currentIndex}
-        total={onboardingData.length}
-      />
-      <View className="mt-20 mx-8">
-        <Btn
-          title={
-            currentIndex === onboardingData.length - 1 ? "Get Started" : "NEXT"
-          }
-          onPress={handleNext}
-          btnColor="bg-orange-500"
+
+      <View className="">
+        <PaginationDots
+          currentIndex={currentIndex}
+          total={onboardingData.length}
         />
-        <Btn
-          title="Skip"
-          onPress={() => router.push("/auth")}
-          btnColor=""
-          textColor="text-gray-500"
-        />
+        <View className="mx-8 mt-16">
+          <Btn
+            title={
+              currentIndex === onboardingData.length - 1
+                ? "Get Started"
+                : "NEXT"
+            }
+            onPress={handleNext}
+            btnColor="bg-orange-500"
+          />
+          <Btn
+            title="Skip"
+            onPress={() => router.push("/auth")}
+            btnColor=""
+            textColor="text-gray-500"
+          />
+        </View>
       </View>
     </View>
   );
